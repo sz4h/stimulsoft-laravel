@@ -23,12 +23,10 @@ You can install the package via composer:
 composer require space/stimulsoft
 ```
 
-You can publish and run the migrations with:
+You can publish the package assets with:
 
 ```bash
-php artisan vendor:publish --tag="stimulsoft-migrations"
 php artisan vendor:publish --tag="stimulsoft-assets"
-php artisan migrate
 ```
 
 You can publish the config file with:
@@ -40,8 +38,34 @@ php artisan vendor:publish --tag="stimulsoft-config"
 This is the contents of the published config file:
 
 ```php
+<?php
+
+// config for Space/Stimulsoft
 return [
+    // Key or file for the license
+    'license' => [
+        'key' => env('STIMULSOFT_KEY',null),
+        /*
+         * Example: license.key
+         */
+        'file' => env('STIMULSOFT_FILE',null),
+    ],
+
+    'viewer' => [
+        'options' => [
+            /*
+             * More at https://www.stimulsoft.com/en/documentation/online/programming-manual/index.html?reports_and_dashboards_for_php_settings.htm
+             */
+            // Enable full screen mode
+            'fullScreenMode' => true,
+            // Enable Scrollbar mode
+            'scrollbarsMode' => true,
+            // Height for non-fullscreen mode
+            'height' => '600px',
+        ]
+    ]
 ];
+
 ```
 
 Optionally, you can publish the views using
@@ -53,8 +77,9 @@ php artisan vendor:publish --tag="stimulsoft-views"
 ## Usage
 
 ```php
-$stimulsoft = new Space\Stimulsoft();
-echo $stimulsoft->echoPhrase('Hello, Space!');
+return Space\Stimulsoft\Facades\Stimulsoft::make()
+    ->setTemplate('reports/SimpleList.mrt')
+    ->view();
 ```
 
 ## Testing
