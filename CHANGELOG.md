@@ -1,3 +1,3 @@
 # Changelog
 
-All notable changes to `stimulsoft-laravel` will be documented in this file.
+All notable changes to `stimulsoft` will be documented in this file.

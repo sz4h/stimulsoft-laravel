@@ -1,15 +1,15 @@
-# This is my package stimulsoft-laravel
+# This is my package stimulsoft
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/space/stimulsoft-laravel.svg?style=flat-square)](https://packagist.org/packages/space/stimulsoft-laravel)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/space/stimulsoft-laravel/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/space/stimulsoft-laravel/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/space/stimulsoft-laravel/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/space/stimulsoft-laravel/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/space/stimulsoft-laravel.svg?style=flat-square)](https://packagist.org/packages/space/stimulsoft-laravel)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/space/stimulsoft.svg?style=flat-square)](https://packagist.org/packages/space/stimulsoft)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/space/stimulsoft/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/space/stimulsoft/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/space/stimulsoft/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/space/stimulsoft/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/space/stimulsoft.svg?style=flat-square)](https://packagist.org/packages/space/stimulsoft)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
 ## Support us
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/stimulsoft-laravel.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/stimulsoft-laravel)
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/stimulsoft.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/stimulsoft)
 
 We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
 
@@ -20,20 +20,20 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require space/stimulsoft-laravel
+composer require space/stimulsoft
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="stimulsoft-laravel-migrations"
+php artisan vendor:publish --tag="stimulsoft-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="stimulsoft-laravel-config"
+php artisan vendor:publish --tag="stimulsoft-config"
 ```
 
 This is the contents of the published config file:
@@ -46,7 +46,7 @@ return [
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag="stimulsoft-laravel-views"
+php artisan vendor:publish --tag="stimulsoft-views"
 ```
 
 ## Usage

@@ -1,12 +1,12 @@
 {
-    "name": "space/stimulsoft-laravel",
-    "description": "This is my package stimulsoft-laravel",
+    "name": "space/stimulsoft",
+    "description": "This is my package stimulsoft",
     "keywords": [
         "space",
         "laravel",
-        "stimulsoft-laravel"
+        "stimulsoft"
     ],
-    "homepage": "https://github.com/space/stimulsoft-laravel",
+    "homepage": "https://github.com/space/stimulsoft",
     "license": "MIT",
     "authors": [
         {
@@ -18,7 +18,8 @@
     "require": {
         "php": "^8.1",
         "spatie/laravel-package-tools": "^1.14.0",
-        "illuminate/contracts": "^10.0"
+        "illuminate/contracts": "^10.0",
+        "stimulsoft/reports-php": "2023.2.2"
     },
     "require-dev": {
         "laravel/pint": "^1.0",

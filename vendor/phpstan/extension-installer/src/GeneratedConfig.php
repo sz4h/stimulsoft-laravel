@@ -10,52 +10,52 @@ final class GeneratedConfig
 {
 
 	public const EXTENSIONS = array (
-  'nesbot/carbon' => 
+  'nesbot/carbon' =>
   array (
-    'install_path' => '/Users/mello/Sites/test/packages/stimulsoft-laravel/vendor/nesbot/carbon',
+    'install_path' => '/Users/mello/Sites/test/packages/stimulsoft/vendor/nesbot/carbon',
     'relative_install_path' => '../../../nesbot/carbon',
-    'extra' => 
+    'extra' =>
     array (
-      'includes' => 
+      'includes' =>
       array (
         0 => 'extension.neon',
       ),
     ),
     'version' => '2.66.0',
   ),
-  'nunomaduro/larastan' => 
+  'nunomaduro/larastan' =>
   array (
-    'install_path' => '/Users/mello/Sites/test/packages/stimulsoft-laravel/vendor/nunomaduro/larastan',
+    'install_path' => '/Users/mello/Sites/test/packages/stimulsoft/vendor/nunomaduro/larastan',
     'relative_install_path' => '../../../nunomaduro/larastan',
-    'extra' => 
+    'extra' =>
     array (
-      'includes' => 
+      'includes' =>
       array (
         0 => 'extension.neon',
       ),
     ),
     'version' => '2.5.1',
   ),
-  'phpstan/phpstan-deprecation-rules' => 
+  'phpstan/phpstan-deprecation-rules' =>
   array (
-    'install_path' => '/Users/mello/Sites/test/packages/stimulsoft-laravel/vendor/phpstan/phpstan-deprecation-rules',
+    'install_path' => '/Users/mello/Sites/test/packages/stimulsoft/vendor/phpstan/phpstan-deprecation-rules',
     'relative_install_path' => '../../phpstan-deprecation-rules',
-    'extra' => 
+    'extra' =>
     array (
-      'includes' => 
+      'includes' =>
       array (
         0 => 'rules.neon',
       ),
     ),
     'version' => '1.1.3',
   ),
-  'phpstan/phpstan-phpunit' => 
+  'phpstan/phpstan-phpunit' =>
   array (
-    'install_path' => '/Users/mello/Sites/test/packages/stimulsoft-laravel/vendor/phpstan/phpstan-phpunit',
+    'install_path' => '/Users/mello/Sites/test/packages/stimulsoft/vendor/phpstan/phpstan-phpunit',
     'relative_install_path' => '../../phpstan-phpunit',
-    'extra' => 
+    'extra' =>
     array (
-      'includes' => 
+      'includes' =>
       array (
         0 => 'extension.neon',
         1 => 'rules.neon',

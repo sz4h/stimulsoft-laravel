@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class StimulsoftCommand extends Command
 {
-    public $signature = 'stimulsoft-laravel';
+    public $signature = 'stimulsoft';
 
     public $description = 'My command';
 

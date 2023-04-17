@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'space/stimulsoft-laravel',
+        'name' => 'space/stimulsoft',
         'pretty_version' => '1.0.0+no-version-set',
         'version' => '1.0.0.0',
         'reference' => NULL,
@@ -1033,7 +1033,7 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
-        'space/stimulsoft-laravel' => array(
+        'space/stimulsoft' => array(
             'pretty_version' => '1.0.0+no-version-set',
             'version' => '1.0.0.0',
             'reference' => NULL,

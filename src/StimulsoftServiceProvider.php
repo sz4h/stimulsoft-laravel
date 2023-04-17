@@ -16,9 +16,10 @@ class StimulsoftServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('stimulsoft-laravel')
+            ->name('stimulsoft')
             ->hasConfigFile()
             ->hasViews()
+            ->hasRoute('routes')
             ->hasMigration('create_stimulsoft-laravel_table')
             ->hasCommand(StimulsoftCommand::class);
     }
