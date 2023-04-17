@@ -1,0 +1,33 @@
+{
+    "title": {
+        "en": "Collection Report",
+        "ar": "تقرير التحصيل"
+    },
+    "date": {
+        "from": "2023-03-10",
+        "to": "2023-03-30"
+    },
+    "company": {
+        "en": "Ooredoo",
+        "ar": "أوريدوو"
+    },
+    "batch": "MTH HO. 16.03.23",
+    "data": [
+        {
+            "name": "AESHAH ALOTAIBI",
+            "id": "26062502",
+            "contract": "1.32529828",
+            "paid": "200.000",
+            "total": "423.050",
+            "remaining": "223.050"
+        },
+        {
+            "name": "سالم غازى جاسى",
+            "id": "24485817",
+            "contract": "1.31483626",
+            "paid": "161.200",
+            "total": "161.200",
+            "remaining": "0.000"
+        }
+    ]
+}

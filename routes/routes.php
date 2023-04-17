@@ -1,3 +1,6 @@
 <?php
 
-\Illuminate\Support\Facades\Route::get('test',fn() => dd('Hello'));
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('test',fn() => dd('Hello'));
