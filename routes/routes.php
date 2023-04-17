@@ -2,5 +2,8 @@
 
 
 use Illuminate\Support\Facades\Route;
-
-Route::get('test',fn() => dd('Hello'));
+use Space\Stimulsoft\Facades\Stimulsoft;
+$report = Stimulsoft::make()
+    ->setTemplate(base_path('reports/SimpleList.mrt'))
+    ->view();
+Route::get('test',fn() => $report);

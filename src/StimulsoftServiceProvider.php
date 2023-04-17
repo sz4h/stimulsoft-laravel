@@ -23,4 +23,13 @@ class StimulsoftServiceProvider extends PackageServiceProvider
             ->hasMigration('create_stimulsoft-laravel_table')
             ->hasCommand(StimulsoftCommand::class);
     }
+    public function bootingPackage()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                base_path('vendor/stimulsoft/reports-php/scripts/stimulsoft.reports.js') => public_path('reporting/stimulsoft.reports.js'),
+                base_path('vendor/stimulsoft/reports-php/scripts/stimulsoft.viewer.js') => public_path('reporting/stimulsoft.viewer.js'),
+            ], "{$this->package->shortName()}-assets");
+        }
+    }
 }

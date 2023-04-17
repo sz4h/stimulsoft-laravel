@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \Space\Stimulsoft\Stimulsoft
+ * @method \Space\Stimulsoft\Stimulsoft make()
  */
 class Stimulsoft extends Facade
 {
