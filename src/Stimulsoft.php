@@ -29,6 +29,7 @@ class Stimulsoft
     {
         return $this->template;
     }
+
     public function setPageTitle(string $pageTitle): static
     {
         $this->pageTitle = $pageTitle;
@@ -42,11 +43,10 @@ class Stimulsoft
 
     public function renderViewer(string $htmlBlock = 'viewerContent')
     {
-        /** https://www.stimulsoft.com/en/documentation/online/programming-manual/index.html?reports_and_dashboards_for_php_settings.htm */
         $options = new StiViewerOptions();
-        $options->appearance->fullScreenMode = true;
-        $options->appearance->scrollbarsMode = true;
-        $options->height = '600px'; // Height for non-fullscreen mode
+        $options->appearance->fullScreenMode = config('stimulsoft.viewer.options.fullScreenMode');
+        $options->appearance->scrollbarsMode = config('stimulsoft.viewer.options.scrollbarsMode');
+        $options->height = config('stimulsoft.viewer.options.height');
 
         /** https://www.stimulsoft.com/en/documentation/online/programming-manual/index.html?reports_and_dashboards_for_php_deployment.htm */
         $viewer = new StiViewer($options);
@@ -63,15 +63,18 @@ class Stimulsoft
         return view('stimulsoft::js-import')->render();
     }
 
-    public function renderHandler() {
+    public function renderHandler()
+    {
         $handler = new StiHandler();
-        //$handler->license->setKey('6vJhGtLLLz2GNviWmUTrhSqnO...');
-        //$handler->license->setFile('license.key');
+        if (config('stimulsoft.license.key'))
+            $handler->license->setKey(config('stimulsoft.license.key'));
+        if (config('stimulsoft.license.file'))
+            $handler->license->setFile('license.key');
         return $handler->getHtml();
     }
 
     public function view()
     {
-        return view('stimulsoft::viewer',['report' => $this]);
+        return view('stimulsoft::viewer', ['report' => $this]);
     }
 }
