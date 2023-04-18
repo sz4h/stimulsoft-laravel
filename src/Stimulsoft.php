@@ -8,6 +8,7 @@ use Stimulsoft\StiHandler;
 use Stimulsoft\StiJavaScript;
 use Stimulsoft\Viewer\StiViewer;
 use Stimulsoft\Viewer\StiViewerOptions;
+use ReflectionClass;
 
 class Stimulsoft
 {
@@ -77,4 +78,21 @@ class Stimulsoft
     {
         return view('stimulsoft::viewer', ['report' => $this]);
     }
+
+    public function getBaseReport()
+    {
+        return $this->getBasePath() . 'stubs/report-example.mrt';
+    }
+
+    public function getBaseDatasource()
+    {
+        return $this->getBasePath() . 'stubs/example.json';
+    }
+
+    private function getBasePath() {
+        $reflector = new ReflectionClass(get_class($this));
+
+        return dirname(dirname($reflector->getFileName())) . DIRECTORY_SEPARATOR;
+    }
+
 }

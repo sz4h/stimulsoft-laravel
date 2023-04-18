@@ -1,0 +1,525 @@
+{
+  "ReportVersion": "2023.2.2.0",
+  "ReportGuid": "74c9151d83a24cc08c19ddcd7a5b4ce8",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportCreated": "/Date(1681844486000+0000)/",
+  "ReportChanged": "/Date(1681844486000+0000)/",
+  "EngineVersion": "EngineV2",
+  "CalculationMode": "Interpretation",
+  "Script": "using System;\r\nusing System.Drawing;\r\nusing System.Windows.Forms;\r\nusing System.Data;\r\nusing Stimulsoft.Controls;\r\nusing Stimulsoft.Base.Drawing;\r\nusing Stimulsoft.Report;\r\nusing Stimulsoft.Report.Dialogs;\r\nusing Stimulsoft.Report.Components;\r\n\r\nnamespace Reports\r\n{\r\n    public class Report : Stimulsoft.Report.StiReport\r\n    {\r\n        public Report()        {\r\n            this.InitializeComponent();\r\n        }\r\n\r\n        #region StiReport Designer generated code - do not modify\r\n\t\t#endregion StiReport Designer generated code - do not modify\r\n    }\r\n}\r\n",
+  "ReferencedAssemblies": {
+    "0": "System.Dll",
+    "1": "System.Drawing.Dll",
+    "2": "System.Windows.Forms.Dll",
+    "3": "System.Data.Dll",
+    "4": "System.Xml.Dll",
+    "5": "Stimulsoft.Controls.Dll",
+    "6": "Stimulsoft.Base.Dll",
+    "7": "Stimulsoft.Report.Dll"
+  },
+  "Dictionary": {
+    "DataSources": {
+      "0": {
+        "Ident": "StiDataTableSource",
+        "Name": "root",
+        "Alias": "root",
+        "Key": "f3fb251d98bb424aa3ff3f5a50637397",
+        "Columns": {
+          "0": {
+            "Name": "batch",
+            "Index": -1,
+            "NameInSource": "batch",
+            "Alias": "batch",
+            "Type": "System.String"
+          },
+          "1": {
+            "Name": "company",
+            "Index": -1,
+            "NameInSource": "company",
+            "Alias": "company",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "data",
+            "Index": -1,
+            "NameInSource": "data",
+            "Alias": "data",
+            "Type": "System.String"
+          },
+          "3": {
+            "Name": "date",
+            "Index": -1,
+            "NameInSource": "date",
+            "Alias": "date",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "relationId",
+            "Index": -1,
+            "NameInSource": "relationId",
+            "Alias": "relationId",
+            "Type": "System.String"
+          },
+          "5": {
+            "Name": "title",
+            "Index": -1,
+            "NameInSource": "title",
+            "Alias": "title",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "example.root"
+      },
+      "1": {
+        "Ident": "StiDataTableSource",
+        "Name": "root_company",
+        "Alias": "root_company",
+        "Key": "149704a6425b43de8d2ed6cccfcde73f",
+        "Columns": {
+          "0": {
+            "Name": "ar",
+            "Index": -1,
+            "NameInSource": "ar",
+            "Alias": "ar",
+            "Type": "System.String"
+          },
+          "1": {
+            "Name": "en",
+            "Index": -1,
+            "NameInSource": "en",
+            "Alias": "en",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "relationId",
+            "Index": -1,
+            "NameInSource": "relationId",
+            "Alias": "relationId",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "example.root_company"
+      },
+      "2": {
+        "Ident": "StiDataTableSource",
+        "Name": "root_data",
+        "Alias": "root_data",
+        "Key": "541a0dff7cc9433498b24701ac493977",
+        "Columns": {
+          "0": {
+            "Name": "contract",
+            "Index": -1,
+            "NameInSource": "contract",
+            "Alias": "contract",
+            "Type": "System.String"
+          },
+          "1": {
+            "Name": "id",
+            "Index": -1,
+            "NameInSource": "id",
+            "Alias": "id",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "name",
+            "Index": -1,
+            "NameInSource": "name",
+            "Alias": "name",
+            "Type": "System.String"
+          },
+          "3": {
+            "Name": "paid",
+            "Index": -1,
+            "NameInSource": "paid",
+            "Alias": "paid",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "relationId",
+            "Index": -1,
+            "NameInSource": "relationId",
+            "Alias": "relationId",
+            "Type": "System.String"
+          },
+          "5": {
+            "Name": "remaining",
+            "Index": -1,
+            "NameInSource": "remaining",
+            "Alias": "remaining",
+            "Type": "System.String"
+          },
+          "6": {
+            "Name": "total",
+            "Index": -1,
+            "NameInSource": "total",
+            "Alias": "total",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "example.root_data"
+      },
+      "3": {
+        "Ident": "StiDataTableSource",
+        "Name": "root_date",
+        "Alias": "root_date",
+        "Key": "725ca9a0641c4c5bab13d0767b1f3245",
+        "Columns": {
+          "0": {
+            "Name": "from",
+            "Index": -1,
+            "NameInSource": "from",
+            "Alias": "from",
+            "Type": "System.String"
+          },
+          "1": {
+            "Name": "relationId",
+            "Index": -1,
+            "NameInSource": "relationId",
+            "Alias": "relationId",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "to",
+            "Index": -1,
+            "NameInSource": "to",
+            "Alias": "to",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "example.root_date"
+      },
+      "4": {
+        "Ident": "StiDataTableSource",
+        "Name": "root_title",
+        "Alias": "root_title",
+        "Key": "492ab8f09fe04952b93a955c958245e2",
+        "Columns": {
+          "0": {
+            "Name": "ar",
+            "Index": -1,
+            "NameInSource": "ar",
+            "Alias": "ar",
+            "Type": "System.String"
+          },
+          "1": {
+            "Name": "en",
+            "Index": -1,
+            "NameInSource": "en",
+            "Alias": "en",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "relationId",
+            "Index": -1,
+            "NameInSource": "relationId",
+            "Alias": "relationId",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "example.root_title"
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiJsonDatabase",
+        "Name": "example",
+        "Alias": "example",
+        "PathData": "https://test.test/data.json"
+      }
+    },
+    "Relations": {
+      "0": {
+        "Name": "root",
+        "ChildColumns": {
+          "0": "relationId"
+        },
+        "ParentColumns": {
+          "0": "company"
+        },
+        "NameInSource": "root_company",
+        "Alias": "root",
+        "ParentSource": "root",
+        "ChildSource": "root_company"
+      },
+      "1": {
+        "Name": "root",
+        "ChildColumns": {
+          "0": "relationId"
+        },
+        "ParentColumns": {
+          "0": "data"
+        },
+        "NameInSource": "root_data",
+        "Alias": "root",
+        "ParentSource": "root",
+        "ChildSource": "root_data"
+      },
+      "2": {
+        "Name": "root",
+        "ChildColumns": {
+          "0": "relationId"
+        },
+        "ParentColumns": {
+          "0": "date"
+        },
+        "NameInSource": "root_date",
+        "Alias": "root",
+        "ParentSource": "root",
+        "ChildSource": "root_date"
+      },
+      "3": {
+        "Name": "root",
+        "ChildColumns": {
+          "0": "relationId"
+        },
+        "ParentColumns": {
+          "0": "title"
+        },
+        "NameInSource": "root_title",
+        "Alias": "root",
+        "ParentSource": "root",
+        "ChildSource": "root_title"
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "3dba9fc225a245d5bb77c0b0b9f7fd75",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiHeaderBand",
+          "Name": "HeaderBand1",
+          "ClientRectangle": "0,0.4,19.01,1.6",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text1",
+              "ClientRectangle": "0,0,4.8,1.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Name"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text2",
+              "Guid": "32d9b96852704afa84ffbf23f2c788f6",
+              "ClientRectangle": "4.8,0,3,1.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Due"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "Text3",
+              "Guid": "b1895953ead14e93b74c7725326fefb9",
+              "ClientRectangle": "7.8,0,2.8,1.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Remaining"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text4",
+              "Guid": "932da0e07d7d424aad85d73152222259",
+              "ClientRectangle": "10.6,0,3,1.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Paid"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "Expression"
+            },
+            "4": {
+              "Ident": "StiText",
+              "Name": "Text5",
+              "Guid": "c315d902b332437aa5d22153a37ca20a",
+              "ClientRectangle": "13.6,0,3.8,1.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Customer No."
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "Expression"
+            }
+          }
+        },
+        "1": {
+          "Ident": "StiDataBand",
+          "Name": "DataBand1",
+          "ClientRectangle": "0,2.8,19.01,1.6",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text6",
+              "Guid": "dc829f9e5fe14451b49646debe195c9f",
+              "ClientRectangle": "0,0,4.8,1.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root_data.name}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";12;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "DataColumn"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text7",
+              "Guid": "0289c1d5d7204d87bf167ba14531686d",
+              "ClientRectangle": "4.8,0,3,1.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root_data.total}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";12;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "DataColumn"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "Text8",
+              "Guid": "76297b386cd94ac08c5f64114d6dd5af",
+              "ClientRectangle": "7.8,0,2.8,1.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root_data.remaining}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";12;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "DataColumn"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text9",
+              "Guid": "68759ea8719f4536a7e45ba151bfdd3c",
+              "ClientRectangle": "10.6,0,3,1.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root_data.paid}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";12;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "DataColumn"
+            },
+            "4": {
+              "Ident": "StiText",
+              "Name": "Text10",
+              "Guid": "d05b1d6d500f4ebc8edfbddaa5734f3e",
+              "ClientRectangle": "13.6,0,3.8,1.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root_data.id}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";12;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "DataColumn"
+            }
+          },
+          "DataSourceName": "root_data"
+        }
+      },
+      "PageWidth": 21.01,
+      "PageHeight": 29.69,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1.0,
+        "Right": 1.0,
+        "Top": 1.0,
+        "Bottom": 1.0
+      }
+    }
+  }
+}
