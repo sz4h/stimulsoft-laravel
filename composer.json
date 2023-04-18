@@ -1,12 +1,12 @@
 {
-    "name": "space/stimulsoft",
+    "name": "sz4h/stimulsoft",
     "description": "This is my package stimulsoft",
     "keywords": [
         "space",
         "laravel",
         "stimulsoft"
     ],
-    "homepage": "https://github.com/space/stimulsoft",
+    "homepage": "https://github.com/sz4h/stimulsoft-laravelt",
     "license": "MIT",
     "authors": [
         {
