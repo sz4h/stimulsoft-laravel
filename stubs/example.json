@@ -8,13 +8,13 @@
         "to": "2023-03-30"
     },
     "company": {
-        "en": "Ooredoo",
-        "ar": "أوريدوو"
+        "en": "Test Company",
+        "ar": "تجربة شركة"
     },
-    "batch": "MTH HO. 16.03.23",
+    "batch": "Batch name",
     "data": [
         {
-            "name": "AESHAH ALOTAIBI",
+            "name": "Ahmed Safaa",
             "id": "26062502",
             "contract": "1.32529828",
             "paid": "200.000",
@@ -22,7 +22,7 @@
             "remaining": "223.050"
         },
         {
-            "name": "سالم غازى جاسى",
+            "name": "سالم محمد علي",
             "id": "24485817",
             "contract": "1.31483626",
             "paid": "161.200",
