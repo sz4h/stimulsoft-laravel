@@ -29,6 +29,8 @@ class StimulsoftServiceProvider extends PackageServiceProvider
             $this->publishes([
                 base_path('vendor/stimulsoft/reports-php/scripts/stimulsoft.reports.js') => public_path('reporting/stimulsoft.reports.js'),
                 base_path('vendor/stimulsoft/reports-php/scripts/stimulsoft.viewer.js') => public_path('reporting/stimulsoft.viewer.js'),
+                base_path('vendor/stimulsoft/reports-php/scripts/stimulsoft.designer.js') => public_path('reporting/stimulsoft.designer.js'),
+                base_path('vendor/stimulsoft/reports-php/scripts/stimulsoft.blockly.editor.js') => public_path('reporting/stimulsoft.blockly.editor.js'),
             ], "{$this->package->shortName()}-assets");
             $this->publishes([
                 $this->package->basePath('../stubs/example.json') => public_path('reporting/example/data.json'),

@@ -2,6 +2,8 @@
 
 namespace Space\Stimulsoft;
 
+use Stimulsoft\Designer\StiDesigner;
+use Stimulsoft\Designer\StiDesignerOptions;
 use Stimulsoft\Report\StiReport;
 use Stimulsoft\StiComponentType;
 use Stimulsoft\StiHandler;
@@ -58,6 +60,22 @@ class Stimulsoft
         $viewer->report = $report;
         return $viewer->getHtml($htmlBlock);
     }
+    public function renderDesigner(string $htmlBlock = 'viewerContent')
+    {
+        $options = new StiDesignerOptions();
+        $options->appearance->fullScreenMode = config('stimulsoft.viewer.options.fullScreenMode');
+        $options->appearance->scrollbarsMode = config('stimulsoft.viewer.options.scrollbarsMode');
+        $options->height = config('stimulsoft.viewer.options.height');
+
+        /** https://www.stimulsoft.com/en/documentation/online/programming-manual/index.html?reports_and_dashboards_for_php_web_designer_deployment.htm */
+        $designer = new StiDesigner($options);
+
+        /** https://www.stimulsoft.com/en/documentation/online/programming-manual/index.html?reports_and_dashboards_for_php_web_designer_creating_editing_report.htm */
+        $report = new StiReport();
+        $report->loadFile($this->getTemplate());
+        $designer->report = $report;
+        return $designer->getHtml($htmlBlock);
+    }
 
     public function renderJs()
     {
@@ -77,6 +95,11 @@ class Stimulsoft
     public function view()
     {
         return view('stimulsoft::viewer', ['report' => $this]);
+    }
+
+    public function design()
+    {
+        return view('stimulsoft::designer', ['report' => $this]);
     }
 
     public function getBaseReport()
