@@ -23,9 +23,6 @@
                     },
                     error: (error) => console.error(`Download error: ${error.message}`)
                 })
-                console.log(json);
-                console.log(JSON.parse(json));
-                console.log(JSON.stringify(json));
             }
         </script>
     @endif
