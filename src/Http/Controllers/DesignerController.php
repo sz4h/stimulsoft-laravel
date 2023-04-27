@@ -10,6 +10,7 @@ class DesignerController extends Controller
     public function __invoke()
     {
         return Stimulsoft::make()
+            ->saveToString('stimulsoft.save-design')
             ->setTemplate(route('stimulsoft.report.template'))
             ->design();
     }
