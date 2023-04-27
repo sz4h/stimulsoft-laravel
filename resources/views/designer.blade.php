@@ -12,7 +12,7 @@
             });
             window.saveReport = async function (json) {
                 $.ajax({
-                    url: '{{ route($report->getSaveRoute()) }}',
+                    url: '{{ route($report->getSaveRoute(),$report->getSaveRouteParams()) }}',
                     method: 'POST',
                     dataType: 'json',
                     data: {

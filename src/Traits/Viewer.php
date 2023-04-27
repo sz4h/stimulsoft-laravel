@@ -2,8 +2,7 @@
 
 namespace Space\Stimulsoft\Traits;
 
-use Stimulsoft\Designer\StiDesigner;
-use Stimulsoft\Designer\StiDesignerOptions;
+use Illuminate\Contracts\View\View;
 use Stimulsoft\Report\StiReport;
 use Stimulsoft\Viewer\StiViewer;
 use Stimulsoft\Viewer\StiViewerOptions;
@@ -29,7 +28,7 @@ trait Viewer
     }
 
 
-    public function view()
+    public function view(): View
     {
         return view('stimulsoft::viewer', ['report' => $this]);
     }

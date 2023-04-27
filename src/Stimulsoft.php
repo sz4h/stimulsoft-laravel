@@ -19,6 +19,9 @@ class Stimulsoft
     use Designer, Viewer;
     private string $template;
     private string $pageTitle = 'Report';
+    /**
+     * @var array|mixed
+     */
 
     public function make(): static
     {
